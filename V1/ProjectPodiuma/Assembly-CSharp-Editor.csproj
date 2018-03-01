@@ -6,10 +6,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{71FA82D1-F973-5B20-A97B-9DAB3C202B00}</ProjectGuid>
+    <ProjectGuid>{2B100E72-B664-000A-B749-1DEB0D9D1C62}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -45,14 +45,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\RessourcesPartagées\Scripts\FollowingCamera.cs" />
-     <Compile Include="Assets\RessourcesPartagées\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\RessourcesPartagées\Scripts\TriggerNextTabl.cs" />
+     <Compile Include="Assets\Shapes2D\Editor\CustomHandles.cs" />
+     <Compile Include="Assets\Shapes2D\Editor\MenuItems.cs" />
+     <Compile Include="Assets\Shapes2D\Editor\ShapeEditor.cs" />
+     <None Include="Assets\Shapes2D\Shaders\Shape.shader" />
+     <None Include="Assets\Shapes2D\Shaders\Common.cginc" />
+     <None Include="Assets\Shapes2D\changelog.txt" />
+     <None Include="Assets\Shapes2D\Shaders\Path.cginc" />
+     <None Include="Assets\Shapes2D\readme.txt" />
+     <None Include="Assets\Shapes2D\Shaders\Triangle.cginc" />
+     <None Include="Assets\Shapes2D\Shaders\Ellipse.cginc" />
+     <None Include="Assets\Shapes2D\Shaders\Rectangle.cginc" />
+     <None Include="Assets\Shapes2D\Shaders\Polygon.cginc" />
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.EditorTestsRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
