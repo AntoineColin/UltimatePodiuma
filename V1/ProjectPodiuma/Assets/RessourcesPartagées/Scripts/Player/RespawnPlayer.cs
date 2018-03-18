@@ -1,28 +1,61 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Reflection;
 
 public class RespawnPlayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	int life = 5;
+	public GameObject checkpoint;	//pt de retour quand objet avec tag respawn rencontré
+	public GameObject de;			//contenant tout les objets inactive
+	private GameObject cam;			//caméra principale;
+	int regain = 0;					//nb de frame avant de pouvoir reprendre des dégâts
 
+	void Start(){
+		de = GameObject.Find ("Cassable");	//on récupère tout les objets qui peuvent se désactiver
+		cam = GameObject.Find ("Main Camera");	//on récupère la caméra
 	}
 
-	// Update is called once per frame
-	void Update () {
-
+	void Update(){
+		if(regain>0)		//on réduit le temps d'attente avant de pouvoir subir des dégâts
+			regain--;
 	}
 
-
-	void OnTriggerEnter2D(Collider2D oth) 
+	void OnTriggerStay2D(Collider2D oth) 
 	{
 
-		if (oth.gameObject.transform.tag == "Respawn") {
-			Application.LoadLevel ("Test");
-			Debug.Log ("Recommencer");
+		if (oth.gameObject.tag == "Respawn") {	//Si on rencontre un ennemi
+			if (life > 0 && regain < 1) {		//et qu'on peut prendre des dégâts et qu'on est pas mort
+				Hurt ();
+			}
+
+		}
+		if(oth.gameObject.tag == "Checkpoint"){	//Si on trouve un checkpoint
+			checkpoint = oth.gameObject;			//on le garde en mémoire
 		}
 
 	}
-}
 
+	void Hurt(){
+		ReloadCheckpoint ();
+		life--;					//On subit 1 dégât
+		regain = 10;			//On fixe le temps avant de pouvoir subir a nouveau des dégâts
+		if(life == 0){			//si on a plus de vie
+			//SceneManager.LoadScene ("MenuP");
+			Debug.Log ("GameOver");
+		}
+		int x = (int)(transform.position.x / 24);
+		int y = (int)(transform.position.y / 13.5);
+		cam.GetComponent<FollowingCamera> ().nextTablView (x,y);
+	}
+
+	void ReloadCheckpoint(){
+		transform.position = checkpoint.transform.position;		//retour à la position du checkpoint
+		foreach (GameObject g in GameObject.FindGameObjectsWithTag ("Instant")) {	//On détruit tout les objets éphémères
+			Destroy (g);
+		}
+		foreach (Transform child in de.transform) {		//On réactive tout les objets inactifs
+			child.gameObject.SetActive (true);
+		}
+	}
+}

@@ -20,7 +20,8 @@ public class TriggerNextTabl : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		scriptCam.nextTablView ((int)tabl.x, (int)tabl.y);
-		GameObject.Destroy (gameObject);
+		scriptCam.blockGen ();								//on génère un bloqueur d'où on vient
+		scriptCam.nextTablView ((int)tabl.x, (int)tabl.y);	//on déplace la caméra sur le nouveau tableau
+		gameObject.SetActive (false);
 	}
 }
