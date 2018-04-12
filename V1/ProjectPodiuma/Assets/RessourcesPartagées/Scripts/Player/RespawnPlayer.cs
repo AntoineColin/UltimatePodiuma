@@ -2,18 +2,22 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Reflection;
+using UnityEngine.UI;
 
 public class RespawnPlayer : MonoBehaviour {
 
 	int life = 5;
 	public GameObject checkpoint;	//pt de retour quand objet avec tag respawn rencontré
 	public GameObject de;			//contenant tout les objets inactive
+	public GameObject lifeBar;
+	public GameObject gameOverScreen;
 	private GameObject cam;			//caméra principale;
 	int regain = 0;					//nb de frame avant de pouvoir reprendre des dégâts
 
 	void Start(){
 		de = GameObject.Find ("Cassable");	//on récupère tout les objets qui peuvent se désactiver
 		cam = GameObject.Find ("Main Camera");	//on récupère la caméra
+
 	}
 
 	void Update(){
@@ -39,10 +43,10 @@ public class RespawnPlayer : MonoBehaviour {
 	void Hurt(){
 		ReloadCheckpoint ();
 		life--;					//On subit 1 dégât
+		lifeBar.GetComponent <Slider> ().value--;
 		regain = 10;			//On fixe le temps avant de pouvoir subir a nouveau des dégâts
 		if(life == 0){			//si on a plus de vie
-			//SceneManager.LoadScene ("MenuP");
-			Debug.Log ("GameOver");
+			StartCoroutine (Die ());
 		}
 		int x = (int)(transform.position.x / 24);
 		int y = (int)(transform.position.y / 13.5);
@@ -57,5 +61,11 @@ public class RespawnPlayer : MonoBehaviour {
 		foreach (Transform child in de.transform) {		//On réactive tout les objets inactifs
 			child.gameObject.SetActive (true);
 		}
+	}
+
+	IEnumerator Die(){
+		gameOverScreen.SetActive (true);
+		yield return new WaitForSeconds (3);
+		SceneManager.LoadScene ("MenuPrincipal");
 	}
 }
