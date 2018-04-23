@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 
 public class PlayerMovement : MonoBehaviour {
@@ -55,26 +58,29 @@ public class PlayerMovement : MonoBehaviour {
 		float[] xy = new float[2];
 		//Récupération et division des coordonnées
 		coordonnees = s.Split (' ');
-		xy[0] = Single.Parse(coordonnees[0]);
-		xy[1] = Single.Parse(coordonnees[1]);
+		xy [0] = Single.Parse (coordonnees [0]);
+		xy [1] = Single.Parse (coordonnees [1]);
 
 
 		/********Sur la table surface*********/
 		//Si on appuie sur Reculer
-		if (Mathf.Sqrt((Mathf.Pow(2,xy[0] - 103)) + (Mathf.Pow(2,xy [1]- 72+930))) < 50)
-		{
+		if (Mathf.Sqrt ((Mathf.Pow (2, xy [0] - 103)) + (Mathf.Pow (2, xy [1] - 72 + 930))) < 50) {
 			Move (-2);
 		}
 		//Si on appuie sur Avancer
-		if (Mathf.Sqrt((Mathf.Pow(2,xy[0] - 251)) + (Mathf.Pow(2,xy [1] - 72+930))) < 50)
-		{
+		if (Mathf.Sqrt ((Mathf.Pow (2, xy [0] - 251)) + (Mathf.Pow (2, xy [1] - 72 + 930))) < 50) {
 			Move (2);
 		}
 		//Si on appuie sur Sauter
-		if (Mathf.Sqrt((Mathf.Pow(2,xy[0] - 1200)) + (Mathf.Pow(2,xy [1] - 72+930))) < 50)
-		{
+		if (Mathf.Sqrt ((Mathf.Pow (2, xy [0] - 1200)) + (Mathf.Pow (2, xy [1] - 72 + 930))) < 50) {
 			Jump ();
 		}
 
+		//Gérer les input comme des clicks
+		List<RaycastResult> hits = new List<RaycastResult>(1);
+		PointerEventData ray = new PointerEventData (EventSystem.current);
+		ray.position = new Vector3 (Single.Parse (coordonnees [0]), Single.Parse (coordonnees [1]), 0);
+		EventSystem.current.RaycastAll (ray, hits);
+		hits [0].gameObject.GetComponent<Button> ().onClick.Invoke ();
 	}
 }
