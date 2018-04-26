@@ -49,6 +49,7 @@
      <Compile Include="Assets\RessourcesPartagées\Scripts\Camera\TriggerNextTabl.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Coins&amp;Score\UpdateScore.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Coins&amp;Score\coins.cs" />
+     <Compile Include="Assets\RessourcesPartagées\Scripts\Manager.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Objets\CreationObjetTag.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Objets\DestroyObject.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Objets\Plateform\PlateformMoving.cs" />
