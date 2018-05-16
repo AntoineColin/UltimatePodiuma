@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class RespawnPlayer : MonoBehaviour {
 
+	public delegate void OnSave();
+	public event OnSave savepoint;
+
 	int life = 5;
 	public GameObject checkpoint;	//pt de retour quand objet avec tag respawn rencontré
 	public GameObject de;			//contenant tout les objets inactive
@@ -25,7 +28,7 @@ public class RespawnPlayer : MonoBehaviour {
 			regain--;
 	}
 
-	void OnTriggerStay2D(Collider2D oth) 
+	void OnTriggerEnter2D(Collider2D oth) 
 	{
 
 		if (oth.gameObject.tag == "Respawn") {	//Si on rencontre un ennemi
