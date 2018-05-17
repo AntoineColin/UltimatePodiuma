@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void LateUpdate () {
 		rb.velocity = Vector2.Scale(rb.velocity, new Vector2(0,1));
 		Move(Input.GetAxis("Horizontal"));
 		if (Input.GetButton("Jump") && !isJumping)

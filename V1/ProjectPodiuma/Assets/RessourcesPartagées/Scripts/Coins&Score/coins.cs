@@ -14,6 +14,10 @@ public class coins : MonoBehaviour {
 	
 	}
 
+
+
+
+
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.transform.tag == "Player") 
