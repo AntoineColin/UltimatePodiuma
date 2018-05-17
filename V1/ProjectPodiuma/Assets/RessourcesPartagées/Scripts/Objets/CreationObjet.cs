@@ -27,14 +27,14 @@ public class CreationObjet : MonoBehaviour {
 		Vector2 position = new Vector2 (float.Parse(regex [0]),float.Parse(regex [1]));
 		//Création de l'objet aux coordonnées
 		if (regex.Length == 2) {
-			cubeTAG1.transform.Translate (position);
+			cubeTAG1.transform.position = position;
 		}else if(regex.Length == 3){
 			if(Int16.Parse (regex[2])==1)
-				cubeTAG1.transform.Translate (position);
+				cubeTAG1.transform.position = position;
 			if(Int16.Parse (regex[2])==2)
-				cubeTAG2.transform.Translate (position);
+				cubeTAG2.transform.position = position;
 			if(Int16.Parse (regex[2])==3)
-				cubeTAG3.transform.Translate (position);
+				cubeTAG3.transform.position = position;
 		}
 	}
 
