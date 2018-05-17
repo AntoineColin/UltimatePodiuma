@@ -12,9 +12,9 @@ public class CreationObjet : MonoBehaviour {
 	private GameObject cubeTAG1, cubeTAG2, cubeTAG3;
 
 	void Start(){
-		cubeTAG1 = Instantiate (objet1, new Vector3(0,0,-50), new Quaternion (0, 0, 0, 0)) as GameObject;
-		cubeTAG2 = Instantiate (objet2, new Vector3(0,0,-50), new Quaternion (0, 0, 0, 0)) as GameObject;
-		cubeTAG3 = Instantiate (objet3, new Vector3(0,0,-50), new Quaternion (0, 0, 0, 0)) as GameObject;
+		cubeTAG1 = Instantiate (objet1, new Vector3(0,0,0), new Quaternion (0, 0, 0, 0)) as GameObject;
+		cubeTAG2 = Instantiate (objet2, new Vector3(-2,0,0), new Quaternion (0, 0, 0, 0)) as GameObject;
+		cubeTAG3 = Instantiate (objet3, new Vector3(-2,0,0), new Quaternion (0, 0, 0, 0)) as GameObject;
 	}
 
 	//Création d'un objet lorsqu'un tag est détecté par la table

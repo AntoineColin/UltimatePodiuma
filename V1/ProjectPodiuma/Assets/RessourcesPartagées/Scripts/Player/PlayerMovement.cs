@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		rb.velocity = Vector2.Scale(rb.velocity, new Vector2(0,1));
-		Move(Input.GetAxis("Horizontal"));
+		Move(Input.GetAxisRaw("Horizontal"));
+		Move ();
 		if (Input.GetButton("Jump") && !isJumping)
 		{
 			Jump();
@@ -41,17 +42,23 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void Move(){
 		if (reculeAppuye)
-			Move (-1);
+			Move (-0.5f);
 		if (avanceAppuye)
-			Move (1);
-		if (sauteAppuye)
-			Jump ();
+			Move (0.5f);
+		if (sauteAppuye && !isJumping)
+			TableJump ();
 	}
 
 	public void Jump()
 	{
 		isJumping = true;
 		rb.AddForce(new Vector2(0, jumpHeight*100));
+	}
+
+	public void TableJump()
+	{
+		isJumping = true;
+		rb.AddForce(new Vector2(0, jumpHeight*40));
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
