@@ -5,23 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class TriggerNextTabl : MonoBehaviour {
 
-	private GameObject cam;
-	private FollowingCamera scriptCam;
-	public Vector2 tabl;
+	Vector2 tableauSuivant;
+
+	public delegate void CamReset (int xTile, int yTile);
+	public static event CamReset NextTabl;
+
+	void OnEnable(){RespawnPlayer.OnDeath += Reset;}
+	void OnDisable(){RespawnPlayer.OnDeath -= Reset;}
+
 
 	void Start(){
-		cam = GameObject.Find ("Main Camera");
-		try{
-			scriptCam = cam.GetComponent<FollowingCamera> ();
-		}catch(Exception e){
-			Debug.Log ("la camera a besoin d'un script followingCamera");
-		}
+		tableauSuivant = FollowingCamera.TellTab (transform.position);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		scriptCam.blockGen ();								//on génère un bloqueur d'où on vient
-		scriptCam.nextTablView ((int)tabl.x, (int)tabl.y);	//on déplace la caméra sur le nouveau tableau
-		gameObject.SetActive (false);
+		NextTabl ((int)tableauSuivant.x, (int)tableauSuivant.y);			//on génère un bloqueur d'où on vient
+		GetComponent<Rigidbody2D> ().isKinematic = true;
+	}
+
+	void Reset(int useless, int parameters){
+		GetComponent<Rigidbody2D> ().isKinematic = false;
 	}
 }

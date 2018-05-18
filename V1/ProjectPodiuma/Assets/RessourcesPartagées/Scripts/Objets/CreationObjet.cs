@@ -25,16 +25,23 @@ public class CreationObjet : MonoBehaviour {
 
 		//Positionnement de l'objet
 		Vector2 position = new Vector2 (float.Parse(regex [0]),float.Parse(regex [1]));
+		double angle = double.Parse (regex [2]);
 		//Création de l'objet aux coordonnées
-		if (regex.Length == 2) {
+		if (regex.Length == 3) {
 			cubeTAG1.transform.position = position;
-		}else if(regex.Length == 3){
-			if(Int16.Parse (regex[2])==1)
+		}else if(regex.Length == 4){
+			if (Int16.Parse (regex [3]) == 1) {
 				cubeTAG1.transform.position = position;
-			if(Int16.Parse (regex[2])==2)
+				cubeTAG1.transform.rotation = new Quaternion (0, 0, angle, 0);
+			}
+			if (Int16.Parse (regex [3]) == 2) {
 				cubeTAG2.transform.position = position;
-			if(Int16.Parse (regex[2])==3)
+				cubeTAG1.transform.rotation = new Quaternion (0, 0, angle, 0);
+			}
+			if (Int16.Parse (regex [3]) == 3){
 				cubeTAG3.transform.position = position;
+				cubeTAG1.transform.rotation = new Quaternion (0, 0, angle, 0);
+			}
 		}
 	}
 

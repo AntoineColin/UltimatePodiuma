@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class RespawnPlayer : MonoBehaviour {
 
-	public delegate void OnSave();
-	public event OnSave savepoint;
+	public delegate void OnSave(int x, int y);
+	public static 	event OnSave OnDeath;
 
 	int life = 5;
 	public GameObject checkpoint;	//pt de retour quand objet avec tag respawn rencontré
@@ -53,17 +53,13 @@ public class RespawnPlayer : MonoBehaviour {
 		}
 		int x = (int)(transform.position.x / 24);
 		int y = (int)(transform.position.y / 13.5);
-		cam.GetComponent<FollowingCamera> ().nextTablView (x,y);
+		cam.GetComponent<FollowingCamera> ().SetView (x,y);
 	}
 
 	void ReloadCheckpoint(){
 		transform.position = checkpoint.transform.position;		//retour à la position du checkpoint
-		foreach (GameObject g in GameObject.FindGameObjectsWithTag ("Instant")) {	//On détruit tout les objets éphémères
-			Destroy (g);
-		}
-		foreach (Transform child in de.transform) {		//On réactive tout les objets inactifs
-			child.gameObject.SetActive (true);
-		}
+		Vector2 tabPos = FollowingCamera.TellTab (transform.position);
+		OnDeath ((int)tabPos.x, (int)tabPos.y);
 	}
 
 	IEnumerator Die(){

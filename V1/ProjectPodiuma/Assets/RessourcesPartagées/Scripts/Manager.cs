@@ -19,11 +19,7 @@ public class Manager : MonoBehaviour {
 			Debug.LogError ("Pas de Player");
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 
 	//Fonction de déplacement pour la table Surface
 	public void MyFunction(string s)
