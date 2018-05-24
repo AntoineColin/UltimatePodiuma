@@ -21,10 +21,10 @@ public class TriggerNextTabl : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		NextTabl ((int)tableauSuivant.x, (int)tableauSuivant.y);			//on génère un bloqueur d'où on vient
-		GetComponent<Rigidbody2D> ().isKinematic = true;
+		GetComponent<BoxCollider2D> ().enabled = false;
 	}
 
 	void Reset(int useless, int parameters){
-		GetComponent<Rigidbody2D> ().isKinematic = false;
+		GetComponent<BoxCollider2D> ().enabled = true;
 	}
 }

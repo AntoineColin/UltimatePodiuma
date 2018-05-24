@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: c9090be1f6e188642a7abaa1c492ac39
+timeCreated: 1527157273
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: perso final-tileset_0
+    21300002: perso final-tileset_1
+    21300004: perso final-tileset_2
+    21300006: perso final-tileset_3
+    21300008: perso final-tileset_4
+    21300010: perso final-tileset_5
+    21300012: perso final-tileset_6
+    21300014: perso final-tileset_7
+    21300016: perso final-tileset_8
+    21300018: perso final-tileset_9
+    21300020: perso final-tileset_10
+    21300022: perso final-tileset_11
+    21300024: perso final-tileset_12
+    21300026: perso final-tileset_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 80
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: perso final-tileset_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 282
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 182
+        width: 56
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 277
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 180
+        width: 87
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 181
+        width: 90
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_5
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 181
+        width: 92
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_6
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 180
+        width: 94
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 110
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_8
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 92
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_9
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 94
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_10
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 94
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_11
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_12
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 2
+        width: 56
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: perso final-tileset_13
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 97
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

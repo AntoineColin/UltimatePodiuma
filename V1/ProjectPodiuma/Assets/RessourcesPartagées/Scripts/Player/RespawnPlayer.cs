@@ -28,19 +28,14 @@ public class RespawnPlayer : MonoBehaviour {
 			regain--;
 	}
 
-	void OnTriggerEnter2D(Collider2D oth) 
+	void OnCollisionEnter2D(Collision2D oth) 
 	{
-
 		if (oth.gameObject.tag == "Respawn") {	//Si on rencontre un ennemi
 			if (life > 0 && regain < 1) {		//et qu'on peut prendre des dégâts et qu'on est pas mort
 				Hurt ();
 			}
 
 		}
-		if(oth.gameObject.tag == "Checkpoint"){	//Si on trouve un checkpoint
-			checkpoint = oth.gameObject;			//on le garde en mémoire
-		}
-
 	}
 
 	void Hurt(){

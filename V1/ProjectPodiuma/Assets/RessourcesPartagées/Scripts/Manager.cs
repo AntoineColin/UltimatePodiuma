@@ -13,11 +13,7 @@ public class Manager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		try{
 		move = GameObject.Find ("Player").GetComponent <PlayerMovement>();
-		}catch(Exception e){
-			Debug.LogError ("Pas de Player");
-		}
 	}
 
 

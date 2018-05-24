@@ -48,6 +48,7 @@
      <Compile Include="Assets\RessourcesPartagées\Scripts\Camera\Disappearing.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Camera\FollowingCamera.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Camera\TriggerNextTabl.cs" />
+     <Compile Include="Assets\RessourcesPartagées\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Coins&amp;Score\UpdateScore.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Coins&amp;Score\coins.cs" />
      <Compile Include="Assets\RessourcesPartagées\Scripts\Manager.cs" />
