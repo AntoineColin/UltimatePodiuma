@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Reflection;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class RespawnPlayer : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class RespawnPlayer : MonoBehaviour {
 	public GameObject gameOverScreen;
 	private GameObject cam;			//caméra principale;
 	int regain = 0;					//nb de frame avant de pouvoir reprendre des dégâts
+	public SceneAsset backScene;	//Scene chargée quand le perso meurt
 
 	void Start(){
 		de = GameObject.Find ("Cassable");	//on récupère tout les objets qui peuvent se désactiver
@@ -58,8 +60,8 @@ public class RespawnPlayer : MonoBehaviour {
 	}
 
 	IEnumerator Die(){
-		gameOverScreen.SetActive (true);
+		//gameOverScreen.SetActive (true);
 		yield return new WaitForSeconds (3);
-		SceneManager.LoadScene ("MenuPrincipal");
+		SceneManager.LoadScene (backScene.name);
 	}
 }

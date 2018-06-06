@@ -34,6 +34,7 @@ public class FollowingCamera : MonoBehaviour {
 	public void NextView(int x, int y){
 		blockGen ();
 		SetView (x,y);
+		Debug.Log ("nextview");
 	}
 
 	public void SetView(int x, int y)			//déplace la caméra vers le prochain tableau

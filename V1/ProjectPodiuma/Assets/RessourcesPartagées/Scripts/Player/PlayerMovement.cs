@@ -79,6 +79,10 @@ public class PlayerMovement : MonoBehaviour {
 		IsGrounded ();
 	}
 
+	void OnCollisionExit2D(Collision2D coll){
+		IsGrounded ();
+	}
+
 	public bool IsGrounded()
 	{
 		grounded = Physics2D.Raycast (transform.position + new Vector3 (distToRight - 0.1f, 0, 0), Vector2.down, distToBottom + 0.05f, groundLayer) ||

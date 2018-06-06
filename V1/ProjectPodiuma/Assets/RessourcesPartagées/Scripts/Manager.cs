@@ -8,12 +8,13 @@ using UnityEngine.Rendering;
 
 public class Manager : MonoBehaviour {
 
-	public GameObject testBlock;
 	private PlayerMovement move;
 
 	// Use this for initialization
 	void Start () {
-		move = GameObject.Find ("Player").GetComponent <PlayerMovement>();
+		try{
+			move = GameObject.Find ("Player").GetComponent <PlayerMovement>();
+		}catch(Exception e){}
 	}
 
 
@@ -24,24 +25,23 @@ public class Manager : MonoBehaviour {
 		/******Récupération des données envoyées par la table surface******/
 		//Initialisation des données
 		string[] coordonnees;
-		float[] xy = new float[2];
 		//Récupération et division des coordonnées
-		coordonnees = s.Split (',');
-		xy [0] = Single.Parse (coordonnees [0]);
-		xy [1] = Single.Parse (coordonnees [1]);
-		Debug.Log (xy [0] + " , " + xy [1]);
+		coordonnees = s.Split (' ');
+
 
 		//Gérer les input comme des clicks
 		List<RaycastResult> hits = new List<RaycastResult>(1);
 		PointerEventData ray = new PointerEventData (EventSystem.current);
-		ray.position = new Vector2 (Single.Parse (coordonnees [0]), Single.Parse (coordonnees [1]));
+		//ray.position = new Vector2 (Single.Parse (coordonnees [0]), -Single.Parse (coordonnees [1])-2);
 		Debug.Log ("ray position : " + ray.position);
 
-		Instantiate (testBlock,ray.position, new Quaternion());
+
 		EventSystem.current.RaycastAll (ray, hits);
 		Debug.Log ("rayposition : " + ray.position + " touched : " + hits[0]);
 		try{
-			hits [0].gameObject.GetComponent<Button> ().onClick.Invoke ();
+			foreach(RaycastResult hit in hits){
+				hit.gameObject.GetComponent<Button> ().onClick.Invoke ();
+			}
 		}catch(Exception e){
 			Debug.Log ("ce qui est cliqué n'est pas un bouton");
 		}

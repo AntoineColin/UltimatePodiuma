@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class MenuManager : MonoBehaviour {
 
-	public Scene niv1, niv2, niv3, niv4, niv5, nivMenu;
+	public SceneAsset niv1, niv2, niv3, niv4, niv5, nivMenu;
 
 	public void chargerScene(int niv){
 		switch(niv){
