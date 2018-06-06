@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Reflection;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class RespawnPlayer : MonoBehaviour {
 
@@ -17,12 +16,12 @@ public class RespawnPlayer : MonoBehaviour {
 	public GameObject gameOverScreen;
 	private GameObject cam;			//caméra principale;
 	int regain = 0;					//nb de frame avant de pouvoir reprendre des dégâts
-	public SceneAsset backScene;	//Scene chargée quand le perso meurt
+	public Animator anim;
 
 	void Start(){
 		de = GameObject.Find ("Cassable");	//on récupère tout les objets qui peuvent se désactiver
 		cam = GameObject.Find ("Main Camera");	//on récupère la caméra
-
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update(){
@@ -41,12 +40,14 @@ public class RespawnPlayer : MonoBehaviour {
 	}
 
 	void Hurt(){
-		ReloadCheckpoint ();
+		
 		life--;					//On subit 1 dégât
 		lifeBar.GetComponent <Slider> ().value--;
 		regain = 10;			//On fixe le temps avant de pouvoir subir a nouveau des dégâts
 		if(life == 0){			//si on a plus de vie
 			StartCoroutine (Die ());
+		}else{
+			ReloadCheckpoint ();
 		}
 		int x = (int)(transform.position.x / 24);
 		int y = (int)(transform.position.y / 13.5);
@@ -60,8 +61,8 @@ public class RespawnPlayer : MonoBehaviour {
 	}
 
 	IEnumerator Die(){
-		//gameOverScreen.SetActive (true);
-		yield return new WaitForSeconds (3);
-		SceneManager.LoadScene (backScene.name);
+		anim.SetTrigger ("mort");
+		yield return new WaitForSeconds (1.5f);
+		SceneManager.LoadScene ("MenuPrincipal");
 	}
 }

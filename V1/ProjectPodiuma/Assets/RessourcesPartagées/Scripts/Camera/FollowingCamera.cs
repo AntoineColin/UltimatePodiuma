@@ -9,12 +9,9 @@ public class FollowingCamera : MonoBehaviour {
 	public float XOffset = 24;
 	public float yOffset = 13.5f;
 	public delegate void passage();
-	public int[] tabl = new int[2];
-	private Vector3 tableau;
+	public Vector3 tableau;
 	public GameObject block;
 	private Vector3 posBase = new Vector3 (12, -6.75f, -2);
-
-
 
 	void OnEnable(){
 		RespawnPlayer.OnDeath += SetView;
@@ -27,14 +24,13 @@ public class FollowingCamera : MonoBehaviour {
 
 	void Start()
 	{
-		tableau = new Vector3 (tableau[0], tabl[1], 0);
+
 		gameObject.transform.position = posBase + Vector3.Scale (tableau, new Vector3(24,13.5f,0));
 	}
 
 	public void NextView(int x, int y){
 		blockGen ();
 		SetView (x,y);
-		Debug.Log ("nextview");
 	}
 
 	public void SetView(int x, int y)			//déplace la caméra vers le prochain tableau
