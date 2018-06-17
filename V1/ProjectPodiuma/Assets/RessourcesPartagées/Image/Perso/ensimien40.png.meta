@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 81e8b908cbaa5df429f91b945cc07d7b
+timeCreated: 1529255084
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ensimien40_0
+    21300002: ensimien40_2
+    21300004: ensimien40_3
+    21300006: ensimien40_4
+    21300008: ensimien40_5
+    21300010: ensimien40_6
+    21300012: ensimien40_7
+    21300014: ensimien40_8
+    21300016: ensimien40_9
+    21300018: ensimien40_10
+    21300020: ensimien40_11
+    21300022: ensimien40_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 80
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Web
+    maxTextureSize: 8192
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ensimien40_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1
+        width: 55
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 84
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_3
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 90
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_4
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1
+        width: 92
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_5
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 0
+        width: 82
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_6
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 124
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_7
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 0
+        width: 111
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_8
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 0
+        width: 89
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_9
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 1
+        width: 93
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_10
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 0
+        width: 81
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_11
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 1
+        width: 55
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: ensimien40_13
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 110
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

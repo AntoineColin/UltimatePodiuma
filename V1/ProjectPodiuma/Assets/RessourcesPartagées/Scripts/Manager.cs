@@ -10,8 +10,9 @@ public class Manager : MonoBehaviour {
 
 	private PlayerMovement move;
 
-	// Use this for initialization
+	//Appelé à la première frame de l'objet
 	void Start () {
+		//obtient la référence aux composants nécessaires
 		try{
 			move = GameObject.Find ("Player").GetComponent <PlayerMovement>();
 		}catch(Exception e){}
@@ -21,7 +22,6 @@ public class Manager : MonoBehaviour {
 	//Fonction de déplacement pour la table Surface
 	public void MyFunction(string s)
 	{
-		Debug.Log ("myfunction");
 		/******Récupération des données envoyées par la table surface******/
 		//Initialisation des données
 		string[] coordonnees;
@@ -32,14 +32,11 @@ public class Manager : MonoBehaviour {
 		//Gérer les input comme des clicks
 		List<RaycastResult> hits = new List<RaycastResult>(1);
 		PointerEventData ray = new PointerEventData (EventSystem.current);
-		//ray.position = new Vector2 (Single.Parse (coordonnees [0]), -Single.Parse (coordonnees [1])-2);
-		Debug.Log ("ray position : " + ray.position);
-
-
+		ray.position = new Vector2 (Single.Parse (coordonnees [0]), -Single.Parse (coordonnees [1])-2);
 		EventSystem.current.RaycastAll (ray, hits);
-		Debug.Log ("rayposition : " + ray.position + " touched : " + hits[0]);
 		try{
 			foreach(RaycastResult hit in hits){
+				//appuie sur tout les boutons traversés par le rayon
 				hit.gameObject.GetComponent<Button> ().onClick.Invoke ();
 			}
 		}catch(Exception e){
@@ -47,6 +44,7 @@ public class Manager : MonoBehaviour {
 		}
 	}
 
+	//Informe le personnage que la zone "droite" de la table surface est touchée
 	public void Avancer(String b){
 		if (b == "Vrai")
 			move.avanceAppuye = true;
@@ -54,6 +52,7 @@ public class Manager : MonoBehaviour {
 			move.avanceAppuye = false;
 	}
 
+	//Informe le personnage que la zone "gauche" de la table surface est touchée
 	public void Reculer(String b){
 			if (b == "Vrai")
 				move.reculeAppuye = true;
@@ -61,6 +60,7 @@ public class Manager : MonoBehaviour {
 					move.reculeAppuye = false;
 	}
 
+	//Informe le personnage que la zone "saut" de la table surface est touchée
 	public void Saute(String b){
 		if (b == "Vrai")
 			move.sauteAppuye = true;

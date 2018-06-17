@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Checkpoint : MonoBehaviour {
 
+	//Quand est traversé par le personnage, se marque comme dernier point de sauvegarde
 	void OnTriggerEnter2D(Collider2D oth){
 		if(oth.gameObject.tag == "Player"){	//Si on trouve un checkpoint
 			Debug.Log ("trigger");

@@ -2,11 +2,33 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\MenuPrincipal\Scripts\MenuManager.cs">
     <Files>
-      <File FileName="Assets\RessourcesPartagées\Scripts\Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scenes\MenuPrincipal\Scripts\MenuManager.cs" Line="5" Column="12" />
-      <File FileName="Assets\RessourcesPartagées\Scripts\Player\RespawnPlayer.cs" Line="6" Column="1" />
-      <File FileName="Assets\RessourcesPartagées\Scripts\Camera\FollowingCamera.cs" Line="37" Column="26" />
+      <File FileName="Assets\RessourcesPartagées\Scripts\Objets\Laser.cs" Line="31" Column="1" />
+      <File FileName="Assets\RessourcesPartagées\Scripts\Player\RespawnPlayer.cs" Line="44" Column="9" />
+      <File FileName="Assets\Scenes\MenuPrincipal\Scripts\MenuManager.cs" Line="18" Column="50" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProjectPodiuma" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="RessourcesPartagées" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="Objets" expanded="True" />
+                  <Node name="Player" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Scenes" expanded="True">
+                <Node name="MenuPrincipal" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="MenuManager.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
